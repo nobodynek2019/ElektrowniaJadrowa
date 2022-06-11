@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/reset.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../seven_segment/Seven Segment.ttf">
+    <title>Panel Kontrolny</title>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a class="row" href="alarms">Alarmy</a></li>
+        <li><a class="row" href="workers">Pracownicy</a></li>
+        <li><a class="row" href="deliveries">Dostawy</a></li>
+        <li><a class="row" href="terminal">Terminal</a></li>
+        <li><a class="row" href="/">Wróć</a></li>
+    </ul>
+    <div>
+        <table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Typ Dostawy</th>
+            <th>Godzina Dostawy</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>{{this.Id}}</td>
+            <td>{{this.TypDostawy}}</td>
+            <td>{{this.Godzina}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+    </div>
+</body>
+</html>
